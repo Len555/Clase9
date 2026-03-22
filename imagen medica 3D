@@ -1,0 +1,12 @@
+import numpy as np
+from scipy.ndimage import uniform_filter
+
+# Volumen 3D (simulación)
+imagen = np.random.rand(5,5,5)
+
+# Aplicar filtro de suavizado
+imagen_suavizada = uniform_filter(imagen, size=2)
+
+print("Original:\n", imagen)
+print("Suavizada:\n", imagen_suavizada)
+  
