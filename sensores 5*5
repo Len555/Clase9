@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Datos de sensores
+datos = np.random.randint(20, 40, (5,5))
+
+# Promedios
+prom_filas = np.mean(datos, axis=1)
+prom_columnas = np.mean(datos, axis=0)
+
+# Desviación estándar
+std_filas = np.std(datos, axis=1)
+std_columnas = np.std(datos, axis=0)
+
+print("Datos:\n", datos)
+print("Promedios filas:", prom_filas)
+print("Promedios columnas:", prom_columnas)
+
+# Visualización
+plt.plot(prom_columnas, label="Promedio por sensor")
+plt.legend()
+plt.show()
