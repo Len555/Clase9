@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Puntos (x, y)
+puntos = np.array([
+    [1,1],
+    [2,1],
+    [2,2],
+    [1,2]
+])
+
+# Matriz de rotación (45 grados)
+theta = np.radians(45)
+rotacion = np.array([
+    [np.cos(theta), -np.sin(theta)],
+    [np.sin(theta), np.cos(theta)]
+])
+
+# Transformación
+transformados = puntos @ rotacion
+
+# Gráfica
+plt.scatter(puntos[:,0], puntos[:,1], label="Original")
+plt.scatter(transformados[:,0], transformados[:,1], label="Transformado")
+plt.legend()
+plt.show()
